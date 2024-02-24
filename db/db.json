@@ -1,0 +1,20 @@
+"{
+  'name': 'Madan No Ou To Michelia',
+  'type': 'Manga',
+  'scoring': '0.0',
+  'views': '331',
+  'date_modified': 'Jun 21, 2020',
+  'profil_url': 'https://es.novelcool.com/novel/Madan-No-Ou-To-Michelia.html',
+  'chapters': [
+    {'number': 'Capítulo 10', 'chapter_url': 'https://es.novelcool.com/chapter/Cap-tulo-10/4716612/', 'date_modified': 'Jun 21, 2020'},
+    {'number': 'Capítulo 9', 'chapter_url': 'https://es.novelcool.com/chapter/Cap-tulo-9/4647958/', 'date_modified': 'May 29, 2020'},
+    {'number': 'Capítulo 8', 'chapter_url': 'https://es.novelcool.com/chapter/Cap-tulo-8/4625219/', 'date_modified': 'May 21, 2020'},
+    {'number': 'Capítulo 7', 'chapter_url': 'https://es.novelcool.com/chapter/Cap-tulo-7/4517633/', 'date_modified': 'Apr 20, 2020'},
+    {'number': 'Capítulo 6', 'chapter_url': 'https://es.novelcool.com/chapter/Cap-tulo-6/4470092/', 'date_modified': 'Apr 13, 2020'},
+    {'number': 'Capítulo 5', 'chapter_url': 'https://es.novelcool.com/chapter/Cap-tulo-5/4470091/', 'date_modified': 'Apr 13, 2020'},
+    {'number': 'Capítulo 4', 'chapter_url': 'https://es.novelcool.com/chapter/Cap-tulo-4/4375590/', 'date_modified': 'Mar 07, 2020'},
+    {'number': 'Vol. 1 Ch. 3', 'chapter_url': 'https://es.novelcool.com/chapter/Vol-1-Ch-3/4355122/', 'date_modified': 'Feb 29, 2020'},
+    {'number': 'Ch. 2', 'chapter_url': 'https://es.novelcool.com/chapter/Ch-2/4318426/', 'date_modified': 'Feb 18, 2020'},
+    {'number': 'Vol. 1 Ch. 1', 'chapter_url': 'https://es.novelcool.com/chapter/Vol-1-Ch-1/4314037/', 'date_modified': 'Feb 16, 2020'}
+  ]
+}"

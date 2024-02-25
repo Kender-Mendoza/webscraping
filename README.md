@@ -15,16 +15,18 @@ This project is a simple web scraping application built with Python. It demonstr
 
 ## Project Structure
 
-webscraping/
-│
-├── main.py
-│
-├── app/
-│   ├── __init__.py
-│   ├── app.py
-│   ├── user_interface.py
-│   └── data_manager.py
-└── resources/
-    ├── (any resource files or configurations)
-└── data/
-    ├── database.json
+```
+  webscraping/
+  │
+  ├── main.py
+  │
+  ├── app/
+  │   ├── __init__.py
+  │   ├── app.py
+  │   ├── user_interface.py
+  │   └── data_manager.py
+  └── resources/
+      ├── (any resource files or configurations)
+  └── data/
+      ├── database.json
+```

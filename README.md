@@ -25,8 +25,10 @@ This project is a simple web scraping application built with Python. It demonstr
   │   ├── app.py
   │   ├── user_interface.py
   │   └── data_manager.py
+  │
   └── resources/
-      ├── (any resource files or configurations)
+  │   ├── (any resource files or configurations)
+  │
   └── data/
       ├── database.json
 ```

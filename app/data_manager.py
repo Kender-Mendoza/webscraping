@@ -1,10 +1,14 @@
 import json
 
-# TODO: use singletow metodology
+class DataManager:
+  _instance = None
+  __DB_NAME = "./db/db.json"
 
-class RecordManager:
-  def __init__(self):
-    self.name = "./db/db.json"
+  def __new__(cls):
+    if cls._instance is None:
+      cls._instance = super().__new__(cls)
+
+    return cls._instance
 
   def save(self, data):
     # TODO: validate data
@@ -16,11 +20,11 @@ class RecordManager:
     return True
 
   def _read_data(self):
-    with open(self.name, 'r') as file:
+    with open(self.__DB_NAME, 'r') as file:
       data = file.read()
 
     return json.loads(data or "[]")
 
   def _write_data(self, data):
-    with open(self.name, 'w') as file:
+    with open(self.__DB_NAME, 'w') as file:
       json.dump(data, file, indent=4)

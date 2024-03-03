@@ -7,7 +7,8 @@ class BuildHtmlTreeService:
       page_content = requests.get(url)
 
       return html.fromstring(page_content.text)
-    except:
-      print('Error when get the html')
+
+    except Exception as e:
+      print('Error: ', type(e).__name__)
 
       return None

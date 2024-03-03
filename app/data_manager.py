@@ -37,6 +37,22 @@ class DataManager:
 
     return next((element for element in data_saved if element['key_id'] == key_id), None)
 
+  def update(self, data):
+    try:
+      cleaned_data = self._delete_data(data['key_id'])
+      json_string = json.dumps(data)
+      data_to_update = json.loads(json_string)
+      data_updated = cleaned_data + [data_to_update]
+      self._write_data(data_updated)
+
+      return True
+    except Exception as e:
+      print("Error: ", type(e).__name__)
+      return None
+
+  def get_all(self):
+    return list(self._read_data())
+
   def _key_id_saved(self):
     data_saved = list(self._read_data())
 
@@ -51,19 +67,6 @@ class DataManager:
   def _write_data(self, data):
     with open(self.__DB_NAME, 'w', encoding='utf-8') as file:
       json.dump(data, file, indent=4)
-
-  def update(self, data):
-    try:
-      cleaned_data = self._delete_data(data['key_id'])
-      json_string = json.dumps(data)
-      data_to_update = json.loads(json_string)
-      data_updated = [cleaned_data] + [data_to_update]
-      self._write_data(data_updated)
-
-      return True
-    except Exception as e:
-      print("Error: ", type(e).__name__)
-      return None
 
   def _delete_data(self, key_id):
     index = self._find_index_by_key_id(key_id)

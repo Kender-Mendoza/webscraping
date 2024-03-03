@@ -1,4 +1,5 @@
 from resources.scripts.build_html_tree_service import BuildHtmlTreeService
+from resources.scripts.download_serie_service import DownloadSerieService
 from resources.scripts.nvlcl.series_info_service import SeriesInfoService
 from resources.scripts.nvlcl.series_panels_service import SeriesPanelsService
 from app.data_manager import DataManager
@@ -39,7 +40,7 @@ if get_panels_or_new_serie_option == '1':
           serie_saved['pending_chapters'].append(new_chapter)
           if DataManager().update(serie_saved): print('serie updated')
 elif get_panels_or_new_serie_option == '2':
-  # ? download panel
+  # ? get url for panels
   get_panels_option = ask_for_get_panels()
   if get_panels_option == "1":
     series_saved = DataManager().get_all()
@@ -55,3 +56,11 @@ elif get_panels_or_new_serie_option == '2':
     chapters_panels = SeriesPanelsService(chapter_to_download).call()
     serie_saved['chapters'].append(chapters_panels)
     if DataManager().update(serie_saved): print('serie updated')
+elif get_panels_or_new_serie_option == '3':
+  # ? download panels
+  series_saved = DataManager().get_all()
+  options = list(map(lambda serie: serie['name'], series_saved))
+  option_selected = ask_for_serie_to_get_panels(options)
+  serie_saved = series_saved[int(option_selected) - 1]
+  serie_saved = DownloadSerieService(serie_saved).call()
+  if DataManager().update(serie_saved): print('serie updated')

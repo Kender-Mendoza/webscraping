@@ -13,6 +13,7 @@ def ask_for_get_panels_or_get_new_serie():
   print("you whant to get panels or get new serie")
   print('1.new serie')
   print('2.get panels')
+  print('3.download chapter')
   return input("option: ")
 
 def ask_for_serie_to_get_panels(options):

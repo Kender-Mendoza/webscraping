@@ -26,7 +26,8 @@ class SeriesInfoService:
       {
         'number': chapter.xpath('.//a/@title')[0],
         'url': self._format_chapter_url(chapter.xpath('.//a/@href')[0]),
-        'date_modified': chapter.xpath('.//span[@class="chapter-item-time"]/text()')[0]
+        'date_modified': chapter.xpath('.//span[@class="chapter-item-time"]/text()')[0],
+        'donwloaded': False
       }
     ), serie_profil_chapters_html))
 

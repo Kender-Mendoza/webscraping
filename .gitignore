@@ -1,2 +1,4 @@
 /temp
 *.pyc
+/venv-3.9.6
+db.sqlite3

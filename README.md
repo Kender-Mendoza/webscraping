@@ -32,3 +32,8 @@ This project is a simple web scraping application built with Python. It demonstr
   └── data/
       ├── database.json
 ```
+
+- Funcionalidades que quiero de mi aplicación
+- tecnologias que quiero utilizar
+- arquitectura que quiero implementar
+- gestion de tareas
